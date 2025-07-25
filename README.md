@@ -4,7 +4,7 @@ A beautifully crafted, fully responsive **Intranet Dashboard** built for **Axero
 
 ## 🚀 Live Preview
 
-🔗 [View Live Dashboard](#)  
+🔗 [View Live Dashboard](https://axero-dashboard.vercel.app/)  
 
 ---
 
