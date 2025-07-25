@@ -53,7 +53,7 @@ Hadil Ben Abdallah
 
 ## ⚖ License
 
-[MIT License](license)
+[MIT License](License)
 
 ---
 
