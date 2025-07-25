@@ -4,7 +4,7 @@ A beautifully crafted, fully responsive **Intranet Dashboard** built for **Axero
 
 ## 🚀 Live Preview
 
-🔗 [View Live Dashboard](https://axero-dashboard.vercel.app/)  
+🔗 [View Live Dashboard](https://axero-dashboard.vercel.app/)
 
 ---
 
@@ -15,21 +15,22 @@ A beautifully crafted, fully responsive **Intranet Dashboard** built for **Axero
 🔹 **Employee Directory**: View, search, and connect with colleagues  
 🔹 **Quick Links**: Access essential tools and company resources in one click  
 🔹 **Mobile Responsive**: Flawlessly adapts to desktops, tablets, and smartphones  
-🔹 **Built with Reusability in Mind**: Component-based structure  
+🔹 **Built with Reusability in Mind**: Component-based structure
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Category      | Technology                          |
-|---------------|-------------------------------------|
-| Frontend      | HTML, CSS, JS, Bootstarp            |
-| Icons         | Lni Icons                           |
-| Deployment    | Vercel                              |
+| Category   | Technology               |
+| ---------- | ------------------------ |
+| Frontend   | HTML, CSS, JS, Bootstarp |
+| Icons      | Lni Icons                |
+| Deployment | Vercel                   |
 
---- 
+---
 
 ## 🎯 Purpose
+
 This project was created as a submission to the Axero Intranet Design Challenge hosted on Dev.to. The goal was to design a simple, intuitive, and modern internal dashboard that could help boost productivity, transparency, and collaboration within an organization.
 
 ---
@@ -38,7 +39,7 @@ This project was created as a submission to the Axero Intranet Design Challenge 
 
 🔹 Improved skills in building scalable UI components  
 🔹 Practiced responsive design and mobile-first development  
-🔹 Strengthened experience with modern frontend tools and design systems  
+🔹 Strengthened experience with modern frontend tools and design systems
 
 ---
 
@@ -46,7 +47,13 @@ This project was created as a submission to the Axero Intranet Design Challenge 
 
 Hadil Ben Abdallah  
 🎓 Software Engineer | ✍🖋 Technical Content Creator | 📱 Social Media Content Creator  
-[🌐 Portfolio](https://hadilbenabdallah.vercel.app/) | [👩🏻‍💼 LinkedIn](https://www.linkedin.com/in/hadil-ben-abdallah/) | [📝 Dev.to](https://dev.to/hadil)  
+[🌐 Portfolio](https://hadilbenabdallah.vercel.app/) | [👩🏻‍💼 LinkedIn](https://www.linkedin.com/in/hadil-ben-abdallah/) | [📝 Dev.to](https://dev.to/hadil)
+
+---
+
+## ⚖ License
+
+[MIT License](license)
 
 ---
 
