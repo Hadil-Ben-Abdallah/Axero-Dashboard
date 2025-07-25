@@ -26,3 +26,36 @@ A beautifully crafted, fully responsive **Intranet Dashboard** built for **Axero
 | Frontend      | HTML, CSS, JS, Bootstarp            |
 | Icons         | Lni Icons                           |
 | Deployment    | Vercel                              |
+
+--- 
+
+## 🎯 Purpose
+This project was created as a submission to the Axero Intranet Design Challenge hosted on Dev.to. The goal was to design a simple, intuitive, and modern internal dashboard that could help boost productivity, transparency, and collaboration within an organization.
+
+---
+
+## 🧠 Learnings
+
+🔹 Improved skills in building scalable UI components  
+🔹 Practiced responsive design and mobile-first development  
+🔹 Strengthened experience with modern frontend tools and design systems  
+
+---
+
+## 👤 Author
+
+Hadil Ben Abdallah  
+🎓 Software Engineer | ✍🖋 Technical Content Creator | 📱 Social Media Content Creator  
+[🌐 Portfolio](https://hadilbenabdallah.vercel.app/) | [👩🏻‍💼 LinkedIn](https://www.linkedin.com/in/hadil-ben-abdallah/) | [📝 Dev.to](https://dev.to/hadil)  
+
+---
+
+## 🌟 Show Your Support
+
+If you like this project:
+
+⭐️ Star the repo  
+🔁 Share it with others  
+🛠️ Fork it and build your version!
+
+<h6 align="center">Made with 💙 By Hadil Ben Abdallah</h6>
