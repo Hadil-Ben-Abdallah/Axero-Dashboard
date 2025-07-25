@@ -1,0 +1,319 @@
+/* ========== header css ========== */
+
+.header {
+  padding: 22px 0;
+  background: $white;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+
+  .header-left {
+    .menu-toggle-btn {
+      .main-btn {
+        padding: 10px 16px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .header-search {
+      form {
+        max-width: 270px;
+        position: relative;
+
+        input {
+          width: 100%;
+          border: 1px solid $light;
+          background: rgba($light, 0.5);
+          border-radius: 8px;
+          padding: 10px 10px 10px 44px;
+          @include transition(0.3s);
+
+          &:focus {
+            border-color: $primary;
+            background: $white;
+          }
+        }
+        button {
+          position: absolute;
+          border: none;
+          background: transparent;
+          left: 16px;
+          top: 0;
+          height: 46px;
+          color: $gray;
+          font-weight: 700;
+
+          i {
+            margin-top: 7px;
+          }
+        }
+      }
+    }
+  }
+
+  .header-right {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      border: 1px solid #F6F6F6;
+      background: #F6F6F6;
+      border-radius: 50%;
+      height: 46px;
+      width: 46px;
+      @include flex-center;
+      position: relative;
+      color: $dark;
+
+      svg {
+        fill: currentColor;
+      }
+
+      &::after {
+        display: none;
+      }
+
+      span {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: #FF737E;
+        border: 2px solid $white;
+        border-radius: 50%;
+        @include flex-center;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .dropdown-menu {
+      width: 350px;
+      border: 1px solid $light;
+      padding: 10px 10px;
+      @include transition(0.3s);
+      top: 21px !important;
+      right: 0;
+      position: absolute;
+      transform: translate3d(0px, 60px, 0px);
+      border-radius: 10px;
+
+      li {
+        padding: 3px 0px;
+        @include transition(0.3s);
+        border-bottom: 1px solid $light;
+        position: relative;
+        z-index: 2;
+
+        &:hover {
+          a {
+            color: $primary;
+            background: #f3f3f3;
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        a {
+          padding: 8px 12px;
+          display: flex;
+          color: $black-70;
+          border-radius: 6px;
+
+          .image {
+            max-width: 35px;
+            width: 100%;
+            height: 35px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 12px;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .content {
+            width: 100%;
+
+            h6 {
+              font-size: 14px;
+              margin-bottom: 5px;
+              font-weight: 600;
+              line-height: 1;
+            }
+            p {
+              font-size: 14px;
+              color: $black-70;
+              margin-bottom: 0px;
+              line-height: 1.4;
+            }
+
+            span {
+              font-size: 12px;
+              color: $black-50;
+            }
+          }
+        }
+      }
+    }
+
+    .dropdown-box {
+      position: relative;
+    }
+
+    .notification-box,
+    .header-message-box {
+      position: relative;
+    }
+
+    .notification-box {
+      .dropdown-menu {
+        &.dropdown-menu-end {
+          transform: translate3d(0px, 60px, 0px);
+        }
+      }
+    }
+
+    .header-message-box {
+      .dropdown-menu {
+        &.dropdown-menu-end {
+          transform: translate3d(0px, 60px, 0px);
+        }
+      }
+    }
+
+    .profile-box {
+      display: flex;
+      position: relative;
+
+      button {
+        width: auto;
+      }
+
+      .dropdown-menu {
+        width: 10rem;
+        min-width: 190px;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 0 #0000, 0 0 #0000, 0 0 16px rgb(0 0 0 / 10%);
+        padding: 8px;
+
+        &.dropdown-menu-end {
+          transform: translate3d(0px, 60px, 0px);
+        }
+
+        li {
+          border-bottom: none;
+          padding: 0;
+
+          a {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            border-radius: 6px;
+            padding: 10px 8px;
+            color: rgba($dark, 0.5);
+
+            i {
+              margin-right: 8px;
+              font-weight: 700;
+            }
+
+            &:hover {
+              color: rgba($dark, 1);
+              background: #f3f3f3;
+            }
+          }
+
+          &.divider {
+            margin: 4px 0;
+            height: 1px;
+            display: block;
+            background: rgb(28 28 28 / 0.05);
+          }
+        }
+
+        .author-info {
+          display: flex;
+          align-items: center;
+          padding: 4px;
+          border-radius: 6px;
+          cursor: pointer;
+
+          .image {
+            flex: none;
+
+            img {
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+
+          .content {
+            padding-left: 8px;
+
+            h4 {
+              font-size: 14px;
+              line-height: 1;
+              font-weight: 500;
+              @include transition(0.3s);
+            }
+
+            a {
+              font-size: 12px;
+              line-height: 1rem;
+              color: rgba($dark, 0.4);
+              padding: 0;
+              display: inline;
+              background-color: initial;
+
+              &:hover {
+                background: initial;
+              }
+            }
+          }
+
+          &:hover {
+            background: #f3f3f3;
+
+            a {
+              color: rgba($dark, 1);
+            }
+          }
+        }
+      }
+
+      .profile-info {
+        margin: 0 5px;
+        .info {
+          display: flex;
+          align-items: center;
+
+          .image {
+            border: 1px solid #DFE5EF;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            margin-right: 14px;
+            position: relative;
+
+            img {
+              width: 100%;
+              border-radius: 50%;
+            }
+          }
+
+          p {
+            font-size: 12px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

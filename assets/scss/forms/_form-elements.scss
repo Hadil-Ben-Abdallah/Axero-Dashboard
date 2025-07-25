@@ -1,0 +1,197 @@
+/* =========== form elements css ========== */
+
+/* ===== input style ===== */
+.input-style-1 {
+  position: relative;
+  margin-bottom: 30px;
+
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    color: $dark;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    background: rgba($light, 0.5);
+    border: 1px solid $light-2;
+    border-radius: 4px;
+    padding: 16px;
+    color: $gray;
+    resize: none;
+    transition: all 0.3s;
+
+    @media #{$xs} {
+      font-size: 14px;
+    }
+
+    &:focus {
+      border-color: $primary;
+      background: $white;
+    }
+
+    &[type="date"],
+    &[type="time"] {
+      background: transparent;
+    }
+
+    &.light-bg {
+      &[type="date"],
+      &[type="time"] {
+        background: rgba($light, 0.5);
+      }
+    }
+    &.light-bg {
+      &[type="date"]:focus,
+      &[type="time"]:focus {
+        background: $white;
+      }
+    }
+  }
+}
+
+/* ========= select style ========== */
+.select-style-1 {
+  margin-bottom: 30px;
+
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    color: $dark;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .select-position {
+    position: relative;
+
+    &::after {
+      border-bottom: 2px solid $gray;
+      border-right: 2px solid $gray;
+      content: "";
+      display: block;
+      height: 10px;
+      width: 10px;
+      margin-top: -5px;
+      pointer-events: none;
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;
+    }
+
+    &.select-sm {
+      &::after {
+        margin-top: -8px;
+      }
+
+      select {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 14px;
+      }
+    }
+
+    select {
+      width: 100%;
+      background: transparent;
+      border: 1px solid $light-2;
+      border-radius: 10px;
+      padding: 16px;
+      padding-right: 38px;
+      color: $gray;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      @include transition(0.3s);
+
+      &:focus {
+        border-color: $primary;
+        outline: none;
+      }
+
+      &.light-bg {
+        background: rgba($light, 0.5);
+      }
+      &.light-bg:focus {
+        background: $white;
+      }
+
+      &.radius-30 {
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+//* ===== checkbox style  */
+.checkbox-style {
+  padding-left: 40px;
+  min-height: 22px;
+
+  .form-check-input {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    margin-left: -40px;
+    cursor: pointer;
+    margin-top: 6px;
+
+    &:checked {
+      background-color: $primary;
+      border-color: $primary;
+    }
+
+    &:disabled {
+      cursor: auto;
+    }
+  }
+  .form-check-input:disabled ~ label {
+    cursor: auto;
+  }
+  label {
+    margin-top: 6px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &.checkbox-success {
+    .form-check-input {
+      &:checked {
+        background-color: $success;
+        border-color: $success;
+      }
+    }
+  }
+  &.checkbox-warning {
+    .form-check-input {
+      &:checked {
+        background-color: $warning;
+        border-color: $warning;
+      }
+    }
+  }
+  &.checkbox-danger {
+    .form-check-input {
+      &:checked {
+        background-color: $danger;
+        border-color: $danger;
+      }
+    }
+  }
+}
+
+.button-group {
+  @media #{$xs} {
+    .main-btn {
+      width: 100%;
+    }
+  }
+}

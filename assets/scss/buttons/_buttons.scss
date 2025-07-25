@@ -1,0 +1,618 @@
+/* ========== Buttons css ========== */
+
+/* buttons base styles */
+.main-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  @include user-select(none);
+  padding: 15px 45px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.4s ease-in-out;
+  border: 1px solid transparent;
+  overflow: hidden;
+
+  i {
+    font-size: 17px;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.group-btn {
+  display: inline-flex;
+  border: 1px solid $light-3;
+  border-radius: 3px;
+
+  &.square-btn {
+    .main-btn {
+    &:first-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:last-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    }
+  }
+
+  &.rounded-full {
+    .main-btn {
+    &:first-child {
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+    }
+  }
+  
+  .main-btn {
+    border-radius: 0;
+
+    &:first-child {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+
+    &:not(&:last-child) {
+      border-right: 1px solid $light-3;
+    }
+  }
+  
+}
+
+.btn-sm {
+  padding: 10px 20px;
+  font-weight: 400;
+}
+
+/* buttons hover effect */
+.btn-hover {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    top: 50%;
+    left: 50%;
+    padding: 50%;
+    z-index: -1;
+    @include transition(0.3s);
+    @include transform(translate3d(-50%, -50%, 0) scale(0));
+  }
+
+  &:hover {
+    &::after {
+      @include transform(translate3d(-50%, -50%, 0) scale(1.3));
+    }
+  }
+}
+
+/* Dropdown buttons */
+.base-dropdown-btn {
+  .main-btn {
+    padding: 8px 15px;
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  .dropdown-menu {
+    box-shadow: $shadow-three;
+    border-radius: 3px;
+    border: none;
+  }
+
+  .dropdown-item {
+    padding: 8px 15px;
+    color: $gray;
+    font-weight: 500;
+
+    &:hover {
+      color: $gray !important;
+      background: #f5f8fc;
+    }
+  }
+}
+
+/* primary buttons */
+.primary-btn {
+  background: $primary;
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+.primary-btn-outline {
+  background: transparent;
+  color: $primary;
+  border-color: $primary;
+
+  &:hover {
+    color: $white;
+    background: $primary;
+  }
+}
+.primary-btn-light {
+  background: rgba($primary, 0.12);
+  color: $primary;
+
+  &:hover {
+    color: $primary;
+  }
+}
+.primary-btn-group {
+  background: transparent;
+  border: 1px solid transparent;
+  color: $primary;
+
+  &.active,
+  &:hover {
+    color: $white;
+    background: $primary;
+    border-color: $primary !important;
+  }
+}
+
+/* secondary buttons */
+.secondary-btn {
+  background: $secondary;
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+.secondary-btn-outline {
+  background: transparent;
+  color: $secondary;
+  border-color: $secondary;
+
+  &:hover {
+    color: $white;
+    background: $secondary;
+  }
+}
+.secondary-btn-light {
+  background: rgba($secondary, 0.12);
+  color: $secondary;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+.secondary-btn-group {
+  background: transparent;
+  border: 1px solid transparent;
+  color: $secondary;
+
+  &.active,
+  &:hover {
+    color: $white;
+    background: $secondary;
+    border-color: $secondary !important;
+  }
+}
+
+/* success buttons */
+.success-btn {
+  background: $success;
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+.success-btn-outline {
+  background: transparent;
+  color: $success;
+  border-color: $success;
+
+  &:hover {
+    color: $white;
+    background: $success;
+  }
+}
+.success-btn-light {
+  background: rgba($success, 0.12);
+  color: $success;
+
+  &:hover {
+    color: $success;
+  }
+}
+.success-btn-group {
+  background: transparent;
+  border: 1px solid transparent;
+  color: $success;
+
+  &.active,
+  &:hover {
+    color: $white;
+    background: $success;
+    border-color: $success !important;
+  }
+}
+
+/* danger buttons */
+.danger-btn {
+  background: $danger;
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+.danger-btn-outline {
+  background: transparent;
+  color: $danger;
+  border-color: $danger;
+
+  &:hover {
+    color: $white;
+    background: $danger;
+  }
+}
+.danger-btn-light {
+  background: rgba($danger, 0.12);
+  color: $danger;
+
+  &:hover {
+    color: $danger;
+  }
+}
+.danger-btn-group {
+  background: transparent;
+  border: 1px solid transparent;
+  color: $danger;
+
+  &.active,
+  &:hover {
+    color: $white;
+    background: $danger;
+    border-color: $danger !important;
+  }
+}
+
+/* warning buttons */
+.warning-btn {
+  background: $warning;
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+.warning-btn-outline {
+  background: transparent;
+  color: $warning;
+  border-color: $warning;
+
+  &:hover {
+    color: $white;
+    background: $warning;
+  }
+}
+.warning-btn-light {
+  background: rgba($warning, 0.12);
+  color: $warning;
+
+  &:hover {
+    color: $warning;
+  }
+}
+.warning-btn-group {
+  background: transparent;
+  border: 1px solid transparent;
+  color: $warning;
+
+  &.active,
+  &:hover {
+    color: $white;
+    background: $warning;
+    border-color: $warning !important;
+  }
+}
+
+/* info buttons */
+.info-btn {
+  background: $info;
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+.info-btn-outline {
+  background: transparent;
+  color: $info;
+  border-color: $info;
+
+  &:hover {
+    color: $white;
+    background: $info;
+  }
+}
+.info-btn-light {
+  background: rgba($info, 0.12);
+  color: $info;
+
+  &:hover {
+    color: $info;
+  }
+}
+.info-btn-group {
+  background: transparent;
+  border: 1px solid transparent;
+  color: $info;
+
+  &.active,
+  &:hover {
+    color: $white;
+    background: $info;
+    border-color: $info !important;
+  }
+}
+
+/* dark buttons */
+.dark-btn {
+  background: $dark;
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+.dark-btn-outline {
+  background: transparent;
+  color: $dark;
+  border-color: $dark;
+
+  &:hover {
+    color: $white;
+    background: $dark;
+  }
+}
+.dark-btn-light {
+  background: rgba($dark, 0.12);
+  color: $dark;
+
+  &:hover {
+    color: $dark;
+  }
+}
+.dark-btn-group {
+  background: transparent;
+  border: 1px solid transparent;
+  color: $dark;
+
+  &.active,
+  &:hover {
+    color: $white;
+    background: $dark;
+    border-color: $dark !important;
+  }
+}
+
+/* light buttons */
+.light-btn {
+  background: $light-3;
+  color: $dark;
+
+  &:hover {
+    color: $dark;
+  }
+}
+.light-btn-outline {
+  background: transparent;
+  color: $dark;
+  border-color: $light-3;
+
+  &:hover {
+    color: $dark;
+    background: $light-3;
+  }
+}
+.light-btn-light {
+  background: rgba($light-3, 0.50);
+  color: $dark;
+
+  &:hover {
+    color: $dark;
+  }
+}
+.light-btn-group {
+  background: transparent;
+  border: 1px solid transparent;
+  color: $black;
+
+  &.active,
+  &:hover {
+    color: $black;
+    background: $light-3;
+    border-color: $light-3 !important;
+  }
+}
+
+/* active buttons */
+.active-btn {
+  background: $active;
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+.active-btn-outline {
+  background: transparent;
+  color: $active;
+  border-color: $active;
+
+  &:hover {
+    color: $white;
+    background: $active;
+  }
+}
+.active-btn-light {
+  background: rgba($active, 0.12);
+  color: $active;
+
+  &:hover {
+    color: $active;
+  }
+}
+.active-btn-group {
+  background: transparent;
+  border: 1px solid transparent;
+  color: $active;
+
+  &.active,
+  &:hover {
+    color: $white;
+    background: $active;
+    border-color: $active !important;
+  }
+}
+
+/* deactive buttons */
+.deactive-btn {
+  background: $deactive;
+  color: $gray-3;
+
+  &:hover {
+    color: $gray-3;
+  }
+}
+.deactive-btn-outline {
+  background: transparent;
+  color: $gray-3;
+  border-color: $deactive;
+
+  &:hover {
+    color: $gray-3;
+    background: $deactive;
+  }
+}
+.deactive-btn-light {
+  background: rgba($deactive, 1);
+  color: $gray-3;
+
+  &:hover {
+    color: $gray-3;
+  }
+}
+.deactive-btn-group {
+  background: transparent;
+  border: 1px solid transparent;
+  color: $sidebar-text;
+
+  &.active,
+  &:hover {
+    color: $sidebar-text;
+    background: #CBE1FF;
+    border-color: #CBE1FF !important;
+  }
+}
+
+/* =========  square-btn ========= */
+.square-btn {
+  border-radius: 0px;
+}
+
+/* =========  rounded-md ========= */
+.rounded-md {
+  border-radius: 10px;
+}
+/* =========  rounded-full ========= */
+.rounded-full {
+  border-radius: 30px;
+}
+
+/* ========== buttons group css ========= */
+.buttons-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+
+  li {
+    margin: 10px;
+  }
+}
+
+/* ====== Status Button ====== */
+.status-btn {
+  padding: 7px 15px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 400;
+
+  &.primary-btn {
+    color: $white;
+    background: rgba($primary, 1);
+  }
+  &.active-btn {
+    color: $primary;
+    background: rgba($primary, 0.1);
+  }
+  &.close-btn {
+    color: $danger;
+    background: rgba($danger, 0.1);
+  }
+  &.warning-btn {
+    color: $warning;
+    background: rgba($warning, 0.1);
+  }
+  &.info-btn {
+    color: $info;
+    background: rgba($info, 0.1);
+  }
+  &.success-btn {
+    color: $success;
+    background: rgba($success, 0.1);
+  }
+  &.secondary-btn {
+    color: $secondary;
+    background: rgba($secondary, 0.1);
+  }
+  &.dark-btn {
+    color: $dark;
+    background: rgba($dark, 0.1);
+  }
+  &.orange-btn {
+    color: $orange;
+    background: rgba($orange, 0.1);
+  }
+}

@@ -1,0 +1,131 @@
+/* ========== Dashboards css ================= */
+
+#doughnutChart1 {
+  @media #{$xs} {
+    height: 250px !important;
+  }
+}
+.legend3 {
+  li {
+    margin-right: 25px;
+
+    div {
+      white-space: nowrap;
+    }
+
+    .bg-color {
+      position: relative;
+      margin-left: 12px;
+      border-radius: 50%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: inherit;
+        left: -12px;
+        top: 5px;
+      }
+    }
+    .text {
+      margin-left: 10px;
+
+      p {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+    }
+  }
+
+  h2 {
+    @media #{$xs} {
+      font-size: 22px;
+    }
+  }
+}
+
+.legend-marketing {
+  .icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 5px;
+    background: #ecf2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+  }
+
+  .bg-color {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 12px;
+    margin-top: 8px;
+  }
+
+  .text {
+    h5 {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+  }
+}
+
+.todo-list-wrapper {
+  ul {
+    li.todo-list-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 20px;
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+      }
+
+      @media #{$xs} {
+        display: block;
+
+        .todo-status {
+          margin-top: 20px;
+        }
+      }
+
+      &.success {
+        &::before {
+          background: $success;
+        }
+      }
+      &.primary {
+        &::before {
+          background: $primary;
+        }
+      }
+      &.orange {
+        &::before {
+          background: $orange;
+        }
+      }
+      &.danger {
+        &::before {
+          background: $danger;
+        }
+      }
+    }
+  }
+}

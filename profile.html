@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo/logo-icon-big.svg"
+      type="image/x-icon"
+    />
+    <title>Axero | Intranet Platform as Dynamic as Your Organization</title>
+
+    <!-- ========== All CSS files linkup ========= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/lineicons.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/materialdesignicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="assets/css/fullcalendar.css" />
+    <link rel="stylesheet" href="assets/css/fullcalendar.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!-- ======== Preloader =========== -->
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
+    <!-- ======== Preloader =========== -->
+
+    <!-- ======== sidebar-nav start =========== -->
+    <aside class="sidebar-nav-wrapper">
+      <div class="navbar-logo">
+        <a href="index.html">
+          <img src="assets/images/logo/logo.svg" alt="logo" />
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="nav-item">
+            <a href="index.html">
+              <span class="icon">
+                <img
+                  src="assets/images/icons/dashboard.png"
+                  width="25"
+                  height="25"
+                  alt="Dashboard Icon"
+                />
+              </span>
+              <span class="text">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="announcements.html">
+              <span class="icon">
+                <img
+                  src="assets/images/icons/announcements.png"
+                  width="23"
+                  height="23"
+                  alt="Announcements Icon"
+                />
+              </span>
+              <span class="text">Announcements</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="events.html">
+              <span class="icon">
+                <img
+                  src="assets/images/icons/calender.png"
+                  width="23"
+                  height="23"
+                  alt="Calendar Icon"
+                />
+              </span>
+              <span class="text">Events</span>
+            </a>
+          </li>
+          <span class="divider"><hr /></span>
+          <li class="nav-item">
+            <a href="documents.html">
+              <span class="icon">
+                <img
+                  src="assets/images/icons/docs.png"
+                  width="23"
+                  height="23"
+                  alt="Docs Icon"
+                />
+              </span>
+              <span class="text">Documents</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="invoice.html">
+              <span class="icon">
+                <img
+                  src="assets/images/icons/invoice.png"
+                  width="23"
+                  height="23"
+                  alt="Invoice Icon"
+                />
+              </span>
+              <span class="text">Invoice</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="chat.html">
+              <span class="icon">
+                <img
+                  src="assets/images/icons/messages.png"
+                  width="23"
+                  height="23"
+                  alt="Messages Icon"
+                />
+              </span>
+              <span class="text">Chat</span>
+            </a>
+          </li>
+          <span class="divider"><hr /></span>
+          <li class="nav-item">
+            <a href="profile.html">
+              <span class="icon">
+                <img
+                  src="assets/images/icons/profile.png"
+                  width="23"
+                  height="23"
+                  alt="Profile Icon"
+                />
+              </span>
+              <span class="text">Profile</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="notifications.html">
+              <span class="icon">
+                <img
+                  src="assets/images/icons/notifications.png"
+                  width="23"
+                  height="23"
+                  alt="Notifications Icon"
+                />
+              </span>
+              <span class="text">Notifications</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="settings.html">
+              <span class="icon">
+                <img
+                  src="assets/images/icons/settings.png"
+                  width="23"
+                  height="23"
+                  alt="Settings Icon"
+                />
+              </span>
+              <span class="text">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="promo-box">
+        <div class="promo-icon">
+          <img
+            class="mx-auto"
+            src="./assets/images/logo/logo-icon-big.svg"
+            alt="Logo"
+          />
+        </div>
+        <h3>✨ Tip of the Day</h3>
+        <p>Celebrate small wins with your team today!</p>
+        <a
+          href="https://axerosolutions.com/"
+          target="_blank"
+          rel="nofollow"
+          class="main-btn primary-btn btn-hover"
+        >
+          Start Now
+        </a>
+      </div>
+    </aside>
+    <div class="overlay"></div>
+    <!-- ======== sidebar-nav end =========== -->
+
+    <!-- ======== main-wrapper start =========== -->
+    <main class="main-wrapper">
+      <!-- ========== header start ========== -->
+      <header class="header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-5 col-md-5 col-6">
+              <div class="header-left d-flex align-items-center">
+                <div class="menu-toggle-btn mr-15">
+                  <button
+                    id="menu-toggle"
+                    class="main-btn primary-btn btn-hover"
+                  >
+                    <i class="lni lni-chevron-left me-2"></i> Menu
+                  </button>
+                </div>
+                <div class="header-search d-none d-md-flex">
+                  <form action="#">
+                    <input type="text" placeholder="Search..." />
+                    <button><i class="lni lni-search-alt"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-6">
+              <!-- <div class="header-right"> -->
+              <div
+                class="header-right d-flex align-items-center justify-content-end"
+              >
+                <!-- welcome message -->
+                <div
+                  class="welcome-message position-absolute top-50 start-50 translate-middle d-none d-xl-flex align-items-center"
+                >
+                  <img
+                    src="assets/images/icons/welcome.png"
+                    alt="Welcome Icon"
+                    style="width: 40px; height: 40px; margin-right: 10px"
+                  />
+                  <h1 class="mb-0">Welcome back, Hadil</h1>
+                </div>
+                <!-- end welcome message -->
+                <!-- notification start -->
+                <div class="notification-box ml-15 d-none d-md-flex">
+                  <button
+                    class="dropdown-toggle"
+                    type="button"
+                    id="notification"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11 20.1667C9.88317 20.1667 8.88718 19.63 8.23901 18.7917H13.761C13.113 19.63 12.1169 20.1667 11 20.1667Z"
+                        fill=""
+                      />
+                      <path
+                        d="M10.1157 2.74999C10.1157 2.24374 10.5117 1.83333 11 1.83333C11.4883 1.83333 11.8842 2.24374 11.8842 2.74999V2.82604C14.3932 3.26245 16.3051 5.52474 16.3051 8.24999V14.287C16.3051 14.5301 16.3982 14.7633 16.564 14.9352L18.2029 16.6342C18.4814 16.9229 18.2842 17.4167 17.8903 17.4167H4.10961C3.71574 17.4167 3.5185 16.9229 3.797 16.6342L5.43589 14.9352C5.6017 14.7633 5.69485 14.5301 5.69485 14.287V8.24999C5.69485 5.52474 7.60672 3.26245 10.1157 2.82604V2.74999Z"
+                        fill=""
+                      />
+                    </svg>
+                    <span></span>
+                  </button>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="notification"
+                  >
+                    <li>
+                      <a href="#0">
+                        <div class="image">
+                          <img src="https://i.pravatar.cc/40?img=47" alt="" />
+                        </div>
+                        <div class="content">
+                          <h6>
+                            Lindsey Curtis
+                            <span class="text-regular">
+                              commented on an event.
+                            </span>
+                          </h6>
+                          <p>
+                            Looking forward to this! Can’t wait to attend 💜.
+                          </p>
+                          <span>10 mins ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#0">
+                        <div class="image">
+                          <img src="https://i.pravatar.cc/40?img=57" alt="" />
+                        </div>
+                        <div class="content">
+                          <h6>
+                            Zain Michael
+                            <span class="text-regular">
+                              liked your product.
+                            </span>
+                          </h6>
+                          <p>
+                            Great design and really user-friendly. Love it so
+                            much!
+                          </p>
+                          <span>10 mins ago</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- notification end -->
+                <!-- message start -->
+                <div class="header-message-box ml-15 d-none d-md-flex">
+                  <button
+                    class="dropdown-toggle"
+                    type="button"
+                    id="message"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.74866 5.97421C7.91444 5.96367 8.08162 5.95833 8.25005 5.95833C12.5532 5.95833 16.0417 9.4468 16.0417 13.75C16.0417 13.9184 16.0364 14.0856 16.0259 14.2514C16.3246 14.138 16.6127 14.003 16.8883 13.8482L19.2306 14.629C19.7858 14.8141 20.3141 14.2858 20.129 13.7306L19.3482 11.3882C19.8694 10.4604 20.1667 9.38996 20.1667 8.25C20.1667 4.70617 17.2939 1.83333 13.75 1.83333C11.0077 1.83333 8.66702 3.55376 7.74866 5.97421Z"
+                        fill=""
+                      />
+                      <path
+                        d="M14.6667 13.75C14.6667 17.2938 11.7939 20.1667 8.25004 20.1667C7.11011 20.1667 6.03962 19.8694 5.11182 19.3482L2.76946 20.129C2.21421 20.3141 1.68597 19.7858 1.87105 19.2306L2.65184 16.8882C2.13062 15.9604 1.83338 14.89 1.83338 13.75C1.83338 10.2062 4.70622 7.33333 8.25004 7.33333C11.7939 7.33333 14.6667 10.2062 14.6667 13.75ZM5.95838 13.75C5.95838 13.2437 5.54797 12.8333 5.04171 12.8333C4.53545 12.8333 4.12504 13.2437 4.12504 13.75C4.12504 14.2563 4.53545 14.6667 5.04171 14.6667C5.54797 14.6667 5.95838 14.2563 5.95838 13.75ZM9.16671 13.75C9.16671 13.2437 8.7563 12.8333 8.25004 12.8333C7.74379 12.8333 7.33338 13.2437 7.33338 13.75C7.33338 14.2563 7.74379 14.6667 8.25004 14.6667C8.7563 14.6667 9.16671 14.2563 9.16671 13.75ZM11.4584 14.6667C11.9647 14.6667 12.375 14.2563 12.375 13.75C12.375 13.2437 11.9647 12.8333 11.4584 12.8333C10.9521 12.8333 10.5417 13.2437 10.5417 13.75C10.5417 14.2563 10.9521 14.6667 11.4584 14.6667Z"
+                        fill=""
+                      />
+                    </svg>
+                    <span></span>
+                  </button>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="message"
+                  >
+                    <li>
+                      <a href="#0">
+                        <div class="image">
+                          <img src="https://i.pravatar.cc/40?img=13" alt="" />
+                        </div>
+                        <div class="content">
+                          <h6>Alex Mars</h6>
+                          <p>Hey! I reviewed the report and it is...</p>
+                          <span>10 mins ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#0">
+                        <div class="image">
+                          <img src="https://i.pravatar.cc/40?img=15" alt="" />
+                        </div>
+                        <div class="content">
+                          <h6>David Smith</h6>
+                          <p>Would you mind please sending me...</p>
+                          <span>12 mins ago</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#0">
+                        <div class="image">
+                          <img src="https://i.pravatar.cc/40?img=43" alt="" />
+                        </div>
+                        <div class="content">
+                          <h6>Anee Lee</h6>
+                          <p>Hey! are you available for freelance?</p>
+                          <span>1h ago</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- message end -->
+                <!-- profile start -->
+                <div class="profile-box ml-15">
+                  <button
+                    class="dropdown-toggle bg-transparent border-0"
+                    type="button"
+                    id="profile"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <div class="profile-info">
+                      <div class="info">
+                        <div class="image">
+                          <img
+                            src="assets/images/profile/profile-image.png"
+                            alt=""
+                          />
+                        </div>
+                        <div>
+                          <h6 class="fw-500">Hadil Ben Abdallah</h6>
+                          <p>Admin</p>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="profile"
+                  >
+                    <li>
+                      <div class="author-info flex items-center !p-1">
+                        <div class="image">
+                          <img
+                            src="assets/images/profile/profile-image.png"
+                            alt="image"
+                          />
+                        </div>
+                        <div class="content">
+                          <h4 class="text-sm">Hadil Ben Abdallah</h4>
+                          <a
+                            class="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white text-xs"
+                            href="profile.html"
+                            >hadil@gmail.com</a
+                          >
+                        </div>
+                      </div>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="profile.html">
+                        <i class="lni lni-user"></i> View Profile
+                      </a>
+                    </li>
+                    <li>
+                      <a href="notifications.html">
+                        <i class="lni lni-alarm"></i> Notifications
+                      </a>
+                    </li>
+                    <li>
+                      <a href="chat.html">
+                        <i class="lni lni-inbox"></i> Messages
+                      </a>
+                    </li>
+                    <li>
+                      <a href="settings.html">
+                        <i class="lni lni-cog"></i> Settings
+                      </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="#0"> <i class="lni lni-exit"></i> Sign Out </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- profile end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ========== header end ========== -->
+
+      <!-- ========== section start ========== -->
+      <section class="section">
+        <div class="container-fluid">
+          <!-- ========== title-wrapper start ========== -->
+          <div class="title-wrapper pt-30">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="title">
+                  <h2>Profile</h2>
+                </div>
+              </div>
+              <!-- end col -->
+              <div class="col-md-6">
+                <div class="breadcrumb-wrapper">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="#0">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Profile
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- ========== title-wrapper end ========== -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card-style settings-card-1 mb-30">
+                <!-- <div
+                  class="title mb-30 d-flex justify-content-between align-items-center"
+                >
+                  <h6 class="mb-10">My Profile</h6>
+                </div> -->
+
+                <div class="profile-info">
+                  <div
+                    class="custom-profile d-flex flex-wrap justify-content-between align-items-start mb-30"
+                  >
+                    <div class="custom-profile-info">
+                      <div class="custom-profile-image">
+                        <img
+                          src="assets/images/profile/profile-image.png"
+                          alt="Profile Image"
+                        />
+                      </div>
+                      <div class="custom-profile-meta">
+                        <h5 class="custom-profile-name">Hadil Ben Abdallah</h5>
+                        <p class="custom-profile-title">Software Engineer</p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="custom-social-icons d-flex align-items-center my-auto"
+                    >
+                      <a
+                        href="https://www.facebook.com/hadil.benabdallah11/"
+                        target="_blank"
+                        class="icon"
+                      >
+                        <i class="lni lni-facebook-fill"></i>
+                      </a>
+                      <a
+                        href="https://x.com/hadilbnabdallah"
+                        target="_blank"
+                        class="icon"
+                      >
+                        <i class="lni lni-twitter-fill"></i>
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/hadil-ben-abdallah/"
+                        target="_blank"
+                        class="icon"
+                      >
+                        <i class="lni lni-linkedin-original"></i>
+                      </a>
+                      <a
+                        href="https://dev.to/hadil"
+                        target="_blank"
+                        class="icon"
+                      >
+                        <i class="lni lni-dev"></i>
+                      </a>
+                      <a
+                        href="https://github.com/Hadil-Ben-Abdallah"
+                        target="_blank"
+                        class="icon"
+                      >
+                        <i class="lni lni-github-original"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="custom-profile-1 mb-30">
+                    <h6 class="section-title">Personal Information</h6>
+                    <div class="info-columns">
+                      <!-- Left Column: First Name + Email -->
+                      <div class="column">
+                        <div class="field">
+                          <p class="label">First Name</p>
+                          <p class="text">Hadil</p>
+                        </div>
+                        <div class="field">
+                          <p class="label">Email address</p>
+                          <p class="text">hadilbenabdallah111@gmail.com</p>
+                        </div>
+                      </div>
+
+                      <!-- Right Column: Last Name + Phone -->
+                      <div class="column">
+                        <div class="field">
+                          <p class="label">Last Name</p>
+                          <p class="text">Ben Abdallah</p>
+                        </div>
+                        <div class="field">
+                          <p class="label">Phone</p>
+                          <p class="text">+216 54363445</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Bio Line -->
+                    <div class="bio">
+                      <p class="label">Bio</p>
+                      <p class="text">
+                        A software engineer specializing in web development. I
+                        also create clear, engaging, fully SEO-optimized, and
+                        well-researched technical content for international
+                        startups through in-depth articles and social media
+                        content that helps them grow and drive organic traffic.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="custom-profile-1">
+                    <h6 class="section-title">Address</h6>
+                    <div class="info-columns">
+                      <!-- Left Column: First Name + Email -->
+                      <div class="column">
+                        <div class="field">
+                          <p class="label">Country</p>
+                          <p class="text">Tunisia</p>
+                        </div>
+                        <div class="field">
+                          <p class="label">City/State</p>
+                          <p class="text">Nabeul, Tunisia</p>
+                        </div>
+                      </div>
+
+                      <!-- Right Column: Last Name + Phone -->
+                      <div class="column">
+                        <div class="field">
+                          <p class="label">Postal Code</p>
+                          <p class="text">8011</p>
+                        </div>
+                        <div class="field">
+                          <p class="label">TAX ID</p>
+                          <p class="text">1234567MAE001</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end container -->
+      </section>
+      <!-- ========== section end ========== -->
+
+      <!-- ========== footer start =========== -->
+      <footer class="footer text-dark py-3">
+        <div class="container-fluid">
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center gap-3"
+          >
+            <!-- Left: Crafted for -->
+            <div class="text-sm">
+              Crafted for Axero · Designed by
+              <a
+                href="https://hadilbenabdallah.vercel.app/"
+                rel="nofollow"
+                target="_blank"
+                style="text-decoration: underline"
+              >
+                Hadil Ben Abdallah
+              </a>
+            </div>
+
+            <!-- Center: Social Icons -->
+            <div class="d-flex align-items-center gap-3 justify-content-center">
+              <a href="https://facebook.com" target="_blank">
+                <img
+                  src="/assets/images/socials/Facebook.gif"
+                  alt="Facebook"
+                  width="35"
+                  height="35"
+                />
+              </a>
+              <a href="https://instagram.com" target="_blank">
+                <img
+                  src="/assets/images/socials/Instagram.gif"
+                  alt="Instagram"
+                  width="35"
+                  height="35"
+                />
+              </a>
+              <a href="https://x.com" target="_blank">
+                <img
+                  src="/assets/images/socials/Twitter.gif"
+                  alt="Twitter"
+                  width="35"
+                  height="35"
+                />
+              </a>
+              <a href="https://youtube.com" target="_blank">
+                <img
+                  src="/assets/images/socials/YouTube.gif"
+                  alt="YouTube"
+                  width="35"
+                  height="35"
+                />
+              </a>
+            </div>
+
+            <!-- Right: Terms -->
+            <div class="d-flex gap-3 text-sm justify-content-center">
+              <a href="#0">Terms & Conditions</a>
+              <a href="#0">Privacy & Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- ========== footer end =========== -->
+    </main>
+    <!-- ======== main-wrapper end =========== -->
+
+    <!-- ========= All Javascript files linkup ======== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Chart.min.js"></script>
+    <script src="assets/js/dynamic-pie-chart.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/fullcalendar.js"></script>
+    <script src="assets/js/jvectormap.min.js"></script>
+    <script src="assets/js/world-merc.js"></script>
+    <script src="assets/js/polyfill.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      const editBtn = document.getElementById("editButton");
+      const saveBtn = document.getElementById("saveBtn");
+      const form = document.getElementById("profileForm");
+      const editText = document.getElementById("editButtonText");
+
+      let isEditing = false;
+
+      editBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        isEditing = !isEditing;
+
+        const fields = form.querySelectorAll("input, textarea, select");
+        fields.forEach((field) => (field.disabled = !isEditing));
+
+        saveBtn.style.display = isEditing ? "inline-block" : "none";
+        editText.textContent = isEditing ? "Cancel" : "Edit";
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const fields = form.querySelectorAll("input, textarea, select");
+        const data = {};
+
+        fields.forEach((field) => {
+          const name = field.name || field.labels?.[0]?.innerText || "unnamed";
+          data[name] = field.value;
+        });
+
+        console.log("Profile saved:", data);
+
+        // Optionally reset UI
+        isEditing = false;
+        fields.forEach((field) => (field.disabled = true));
+        saveBtn.style.display = "none";
+        editText.textContent = "Edit";
+
+        // Optionally send `data` to server with fetch() here
+      });
+    </script>
+  </body>
+</html>
