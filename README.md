@@ -23,7 +23,7 @@ A beautifully crafted, fully responsive **Intranet Dashboard** built for **Axero
 
 | Category   | Technology               |
 | ---------- | ------------------------ |
-| Frontend   | HTML, CSS, JS, Bootstarp |
+| Frontend   | ![Tech Stack](https://skillicons.dev/icons?i=html,css,js,bootstrap) |
 | Icons      | Lni Icons                |
 | Deployment | Vercel                   |
 
