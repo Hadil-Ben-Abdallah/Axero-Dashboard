@@ -15,7 +15,6 @@ A beautifully crafted, fully responsive **Intranet Dashboard** built for **Axero
 🔹 **Employee Directory**: View, search, and connect with colleagues  
 🔹 **Quick Links**: Access essential tools and company resources in one click  
 🔹 **Mobile Responsive**: Flawlessly adapts to desktops, tablets, and smartphones  
-🔹 **Built with Reusability in Mind**: Component-based structure
 
 ---
 
